@@ -12,11 +12,13 @@ h4 {
 a:hover {
     color: #ff6600;
 }
+
 .story {
     margin-bottom: 1em;
     padding: 0.5em;
     border-left: 2px solid #ff6600;
     transition: 0.2s border;
+    cursor: default;
 }
 
 .story:hover {
