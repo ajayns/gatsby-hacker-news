@@ -1,11 +1,24 @@
 import React from 'react'
+import StoryItem from '../components/story-item'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <ul>
+      {data.allHnStory.edges.map(({node}) => <StoryItem story={node} />)}
+    </ul>
   </div>
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query PageQuery {
+    allHnStory(sort: { fields: [order] }, limit: 10) {
+      edges {
+        node {
+          ...Story
+        }
+      }
+    }
+  }
+`
