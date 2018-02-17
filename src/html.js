@@ -13,14 +13,14 @@ class Html extends Component {
                     <meta charSet="utf-8" />
                     <meta
                         name="description"
-                        content="Gatsby HackerNews: A clone of Hacker News written in Gatsby"
+                        content="Gatsby Hacker News: A clone of Hacker News written in Gatsby"
                     />
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     />
-                    <title>Gatsby HackerNews</title>
+                    <title>Gatsby Hacker News</title>
                 </head>
                 <body>
                     <div
