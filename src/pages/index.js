@@ -3,9 +3,9 @@ import StoryItem from '../components/story-item'
 
 const IndexPage = ({data}) => (
   <div>
-    <ul>
+    <div>
       {data.allHnStory.edges.map(({node}) => <StoryItem story={node} />)}
-    </ul>
+    </div>
   </div>
 )
 

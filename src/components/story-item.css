@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h4 {
+    font-size: 22px;
+    margin: 0;
+    display: inline;
+}
+
+a:hover {
+    color: #ff6600;
+}
+.story {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-left: 2px solid #ff6600;
+    transition: 0.2s border;
+}
+
+.story:hover {
+    border-left: 6px solid #ff6600;
+}
+
+.score {
+    font-size: 18px;
+    color: #ff6600;
+}
