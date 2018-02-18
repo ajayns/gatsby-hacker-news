@@ -8,9 +8,17 @@ const path = require(`path`)
 exports.createPages = ({ graphql, boundActionCreators }) => {
     const { createPage } = boundActionCreators
     return new Promise((resolve, reject) => {
+        // The “graphql” function allows us to run arbitrary
+        // queries against local Hacker News graphql schema. Think of
+        // it like the site has a built-in database constructed
+        // from the fetched data that you can run queries against.
+
+        // HnStory is a data node type created from the HN API “allHnStory” is a
+        // "connection" (a GraphQL convention for accessing a list of nodes) gives
+        // us an easy way to query all HnStory nodes.
         graphql(`
             {
-                allHnStory(limit: 10) {
+                allHnStory (sort: { fields: [order] }, limit: 10) {
                     edges {
                         node {
                             id
@@ -23,12 +31,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             if(result.errors) {
                 reject(result.errors)
             }
-
+            
+            const template = path.resolve(`./src/templates/story.js`)
+            // Create HN story pages.
+            // We want to create a detailed page for each
+            // story page. We'll just use the HN story ID for the slug.
             result.data.allHnStory.edges.forEach(({node})=> {
-                console.log(node.id)
+                // Each page is required to have a `path` as well
+                // as a template component. The `context` is
+                // optional but is often necessary so the template
+                // can query data specific to each page.
                 createPage({
                     path: `/item/${node.id}`,
-                    component: path.resolve(`./src/templates/story.js`),
+                    component: template,
                     context: {
                         id: node.id,
                     },

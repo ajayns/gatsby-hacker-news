@@ -1,10 +1,11 @@
 import React from 'react'
+
 import StoryItem from '../components/story-item'
 
-const IndexPage = ({data}) => (
+const IndexPage = ({data, active}) => (
   <div>
     <div>
-      {data.allHnStory.edges.map(({node}) => <StoryItem story={node} />)}
+      {data.allHnStory.edges.map(({ node }) => <StoryItem key={node.id} story={node} active={false} />)}
     </div>
   </div>
 )
