@@ -9,7 +9,7 @@ h4 {
     display: inline;
 }
 
-a:hover {
+.story a:hover {
     color: #ff6600;
 }
 
