@@ -1,13 +1,27 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Gatsby Hacker News 
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Gatsby is a blazing-fast static site generator for React. This is the Gatsby implementation of Hackernews using the `gatsbys-source-hackernews` plugin.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+![Giphy](https://media.giphy.com/media/PoK1epauQuWcuhmH57/giphy.gif)
 
-## Deploy
+## Development
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Kickstarted with the `gatsby-default-starter` boilerplate. 
+
+Install all the required packages/dependencies using yarn
+
+### `yarn`
+
+Setup development server
+
+### `gatsby develop`
+
+Build static files for production
+
+### `gatsby build`
+
+
+## Contributing
+
+Feel free to open issues and pull requests!
+

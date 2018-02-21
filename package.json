@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "gatsby-hacker-news",
+  "description": "Gatsby implementation of Hacker News",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ajay NS",
   "dependencies": {
     "gatsby": "^1.9.199",
     "gatsby-link": "^1.6.37",
