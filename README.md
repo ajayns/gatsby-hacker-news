@@ -1,8 +1,10 @@
 # Gatsby Hacker News 
 
-Gatsby is a blazing-fast static site generator for React. This is the Gatsby implementation of Hackernews using the `gatsbys-source-hackernews` plugin.
+Gatsby is a blazing-fast static site generator for React. This is the Gatsby implementation of Hackernews using the `gatsby-source-hackernews` plugin.
 
 ![Giphy](https://media.giphy.com/media/PoK1epauQuWcuhmH57/giphy.gif)
+
+[Live Demo](https://gatsby-hacker-news.netlify.com/)
 
 ## Development
 
