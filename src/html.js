@@ -1,13 +1,35 @@
 import React, { Component } from "react"
 import favicon from "./assets/favicon.ico"
 
+let stylesStr
+if (process.env.NODE_ENV === `production`) {
+    try {
+        stylesStr = require(`!raw-loader!../public/styles.css`)
+    } catch (e) {
+        console.log(e)
+    }
+}
+
 class Html extends Component {
     render() {
+        let css
+        if (process.env.NODE_ENV === `production`) {
+            css = ( <
+                style id = "gatsby-inlined-css"
+                dangerouslySetInnerHTML = {
+                    {
+                        __html: stylesStr
+                    }
+                }
+                />
+            )
+        }
+
         return (
             <html op="news" lang="en">
                 <head>
                     {this.props.headComponents}
-
+                    {css}
                     <meta name="referrer" content="origin" />
                     <link rel="shortcut icon" href={favicon} />
                     <meta charSet="utf-8" />
