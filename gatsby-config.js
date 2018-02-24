@@ -18,5 +18,21 @@ module.exports = {
      * tree.
      */
     'gatsby-source-hacker-news',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Hacker News`,
+        short_name: `Gatsby Hacker News`,
+        start_url: `/`,
+        background_color: `#ff6600`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+      },
+    },
+    // This plugin generates a service worker and AppShell
+    // html file so the site works offline and is otherwise
+    // resistant to bad networks. Works with almost any
+    // site!
+    `gatsby-plugin-offline`
   ],
 };

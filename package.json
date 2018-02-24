@@ -6,6 +6,8 @@
   "dependencies": {
     "gatsby": "^1.9.199",
     "gatsby-link": "^1.6.37",
+    "gatsby-plugin-manifest": "^1.0.14",
+    "gatsby-plugin-offline": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-source-hacker-news": "^1.0.10",
     "react-helmet": "^5.2.0"
